@@ -1,0 +1,18 @@
+en:
+  reports:
+    dams_metadata_report:
+      title: DAMS Metadata Report
+      description: Digital object export for import into Portfolio
+      headers:
+        accession_no: Accession No.
+        asset_id: Asset ID
+        archives_collection_id: Archives Collection ID
+        artist_creator: Artist Creator
+        description: Description
+        copyright: Copyright
+        description_writer: Description Writer
+        restrictions: Restrictions
+        rights_status: Rights Status
+        rights_uri: Rights URI
+        source_system: Source System
+        do_title: Title
