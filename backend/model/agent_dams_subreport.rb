@@ -9,13 +9,14 @@ class AgentDamsSubreport < AbstractSubreport
 		@id = id
 	end
 
+	# for GOKM - this uses sort names, not primary names
 	def query_string
 		"select
 		  concat_ws(', ',
-		    group_concat(distinct name_person.primary_name separator ', '),
-		    group_concat(distinct name_software.software_name separator ', '),
-		    group_concat(distinct name_family.family_name separator ', '),
-		    group_concat(distinct name_corporate_entity.primary_name separator ', ')
+		    group_concat(distinct name_person.sort_name separator ', '),
+		    group_concat(distinct name_software.sort_name separator ', '),
+		    group_concat(distinct name_family.sort_name separator ', '),
+		    group_concat(distinct name_corporate_entity.sort_name separator ', ')
            ) as ref
 
 		from linked_agents_rlshp
